@@ -14,7 +14,6 @@ class _HomeState extends State<Home> {
       child: Container(
         color: Colors.white,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(
               'BARCELONA',
@@ -37,14 +36,14 @@ class _HomeState extends State<Home> {
               ),
             ),
             SizedBox(
-              height: 10.0,
+              height: 30.0,
             ),
             SvgPicture.asset(
               'assets/weather/clear.svg',
               width: MediaQuery.of(context).size.width * 0.40,
             ),
             SizedBox(
-              height: 10.0,
+              height: 30.0,
             ),
             Text(
               '14º',
@@ -77,14 +76,19 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            ClipRRect(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30.0),
-                topRight: Radius.circular(30.0),
-              ),
-              child: Container(
-                color: Theme.of(context).primaryColor,
-                height: 300,
+            Expanded(
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(30.0),
+                  ),
+                  child: Container(
+                    color: Theme.of(context).primaryColor,
+                    height: 300,
+                  ),
+                ),
               ),
             )
           ],
