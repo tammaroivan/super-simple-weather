@@ -211,7 +211,7 @@ class HourlyData {
     precipIntensity =num.parse(json['precipIntensity'].toStringAsFixed(2));
     precipProbability = num.parse(json['precipProbability'].toStringAsFixed(2));
     temperature = num.parse(json['temperature'].toStringAsFixed(2));
-    apparentTemperature = json['apparentTemperature'];
+    apparentTemperature =  num.parse(json['apparentTemperature'].toStringAsFixed(2));
     dewPoint = num.parse(json['dewPoint'].toStringAsFixed(2));
     humidity = num.parse(json['humidity'].toStringAsFixed(2));
     pressure = num.parse(json['pressure'].toStringAsFixed(2));
